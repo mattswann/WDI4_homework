@@ -56,7 +56,7 @@ pluralize(50, 'geese');
 
 
 for (var i = 1; i <= 10; i += 1) {
-    for (var j = 1; j <= 100; j++) {
+    for (var j = 1; j <= 10; j++) {
       var result = i * j;
       console.log(i + ' * ' + j + " = " + result);
     }
