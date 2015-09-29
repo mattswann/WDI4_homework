@@ -55,8 +55,9 @@ pluralize(10, 'sheep');
 pluralize(50, 'geese');
 
 
-for (var i = 0; i <= 10; i += 1) {
-    var timesItBy = 9;
-    var result = i * timesItBy
-    console.log(i + ' * ' + timesItBy + " = " + result);
+for (var i = 1; i <= 10; i += 1) {
+    for (var j = 1; j <= 100; j++) {
+      var result = i * j;
+      console.log(i + ' * ' + j + " = " + result);
+    }
 }
