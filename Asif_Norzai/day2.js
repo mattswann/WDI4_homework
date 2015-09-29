@@ -1,8 +1,8 @@
 function greaterNum(num1, num2) {
   if (num1 > num2) {
-    return console.log('The greater number of ' + num1 + ' and ' + num2 + ' is ' + num1);
+    return console.log('The greater number of ' + num1 + ' and ' + num2 + ' is ' + num1 + '.');
   } else {
-    return console.log('The greater number of ' + num2 + ' and ' + num1 + ' is ' + num2);
+    return console.log('The greater number of ' + num2 + ' and ' + num1 + ' is ' + num2 + '.');
   }
 }
 
@@ -28,15 +28,15 @@ helloWorld();
 
 function assignGrade(numberScore) {
   if (numberScore >= 90) {
-    return console.log('For ' + numberScore + ', you got an A');
+    return console.log('For ' + numberScore + ', you got an A.');
   } else if (numberScore >= 80) {
-    return console.log('For ' + numberScore + ', you got a B');
+    return console.log('For ' + numberScore + ', you got a B.');
   } else if (numberScore >= 70) {
-    return console.log('For ' + numberScore + ', you got a C');
+    return console.log('For ' + numberScore + ', you got a C.');
   } else if (numberScore >= 60) {
-    return console.log('For ' + numberScore + ', you got a D');
+    return console.log('For ' + numberScore + ', you got a D.');
   } else {
-    return console.log('For ' + numberScore + ', you got a F');
+    return console.log('For ' + numberScore + ', you got a F.');
   }
 }
 
