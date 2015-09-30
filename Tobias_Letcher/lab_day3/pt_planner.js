@@ -30,7 +30,7 @@ function planner(start, end) {
         if (lines[0].stops.indexOf(end) !== -1) {
             trip += trip += lines[0].stops.slice((lines[0].stops.indexOf(start)), (lines[0].stops                                   .indexOf(end) + 1));
             } else {
-                trip += lines[0].stops.slice((lines[0].stops.indexOf(start)), (lines[0].stops                                   .indexOf("Richmond") + 1));
+                trip += lines[0].stops.slice((lines[0].stops.indexOf(start)), (lines[0].stops                                   .indexOf("Richmond") + 1))+ ",";
                 for (var i = 0; i < 3; i++){
                     if (lines[i].stops.indexOf(end) !== -1){
                         if (lines[i].stopsBefore.indexOf(end) !== -1){
@@ -45,7 +45,7 @@ function planner(start, end) {
             if (lines[1].stops.indexOf(end) !== -1) {
             trip += trip += lines[1].stops.slice((lines[1].stops.indexOf(start)), (lines[1].stops                                   .indexOf(end) + 1));
             } else {
-                trip += lines[1].stops.slice((lines[1].stops.indexOf(start)), (lines[1].stops                                   .indexOf("Richmond") + 1));
+                trip += lines[1].stops.slice((lines[1].stops.indexOf(start)), (lines[1].stops                                   .indexOf("Richmond") + 1)) +',';
                 for (var q = 0; q < 3; q++){
                     if (lines[q].stops.indexOf(end) !== -1){
                         if (lines[q].stopsBefore.indexOf(end) !== -1){
@@ -60,7 +60,7 @@ function planner(start, end) {
             if (lines[2].stops.indexOf(end) !== -1) {
             trip += trip += lines[2].stops.slice((lines[2].stops.indexOf(start)), (lines[2].stops                                   .indexOf(end) + 1));
             } else {
-                trip += lines[2].stops.slice((lines[2].stops.indexOf(start)), (lines[2].stops                                   .indexOf("Richmond") + 1));
+                trip += lines[2].stops.slice((lines[2].stops.indexOf(start)), (lines[2].stops                                   .indexOf("Richmond") + 1)) + ",";
                 for (var j = 0; j < 3; j++){
                     if (lines[j].stops.indexOf(end) !== -1){
                         if (lines[j].stopsBefore.indexOf(end) !== -1){
@@ -72,5 +72,17 @@ function planner(start, end) {
                 }
             }
         }
-console.log(trip);
+var newTrip = trip.split(',');
+var result = " ";
+for (var d = 0; d < newTrip.length; d++){
+    
+    if (d === (newTrip.length) - 1 ){
+        result += newTrip[d];
+    }else {
+        result += newTrip[d] + "  ---->   ";
+    }
+}
+console.log(result)
+console.log(newTrip.length + " stops total");
+
 }
