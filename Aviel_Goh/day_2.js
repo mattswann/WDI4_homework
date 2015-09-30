@@ -67,11 +67,11 @@ Call that function for a few different scores and log the result to make sure it
 function assignGrade(numberScore) {
   if (numberScore >= 90) {
     return 'A';
-  } else if (numberScore < 90 && numberScore >= 80) {
+  } else if (numberScore >= 80) {
     return 'B';
-  } else if (numberScore < 80 && numberScore >= 70) {
+  } else if (numberScore >= 70) {
     return 'C';
-  } else if (numberScore < 70 && numberScore >= 60) {
+  } else if (numberScore >= 60) {
     return 'D';
   } else {
     return 'F';
@@ -109,6 +109,7 @@ function pluralize(noun, number) {
 console.log(pluralize('dog', 1));
 console.log(pluralize('sheep', 5));
 console.log(pluralize('cat', 4));
+console.log(pluralize('bird', -3));
 
 /*
 Multiplication Tables
