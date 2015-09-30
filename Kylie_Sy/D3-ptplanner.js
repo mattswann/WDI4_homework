@@ -3,7 +3,7 @@
 // code by Kylie Sy
 
 console.log("Melbourne Public Transport Journey Planner");
-console.log("Call journeyPlanner()")
+console.log("Call journeyPlanner()");
 
 // train line objects
 var alamein = { 
@@ -19,7 +19,7 @@ var glenWaverly = {
 var sandringham = {
 	name: "Sandringham",
 	stops: ["Southern Cross", "Richmond", "South Yarra", "Prahran", "Windsor"]
-};
+	};
 
 
 var trainLinesArray = [alamein, glenWaverly, sandringham];
