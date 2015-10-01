@@ -82,7 +82,29 @@ for (var d = 0; d < newTrip.length; d++){
         result += newTrip[d] + "  ---->   ";
     }
 }
-console.log(result)
-console.log(newTrip.length + " stops total");
+var totalTrips = newTrip.length + " stops total";
+return [[result], [totalTrips]];
+}
+
+var button = document.getElementById('btnSearch');
+button.addEventListener('click', seachIt);
+document.getElementById("fromBox").placeholder='Enter origin';
+document.getElementById("toBox").placeholder='Enter destination';
+
+var seachIt = function() {
+  var stops =['Flinders Street', 'East Richmond', 'Burnley', 'Hawthorn', 'Glenferrie', 'Melbourne Central', 'Parliament', 'Richmond', 'Kooyong', 'Tooronga','Southern Cross', 'South Yarra','Prahran', 'Windsor'];
+  var inputBoxeOrigin = document.getElementById('fromBox').value;
+  var inputBoxeDestination = document.getElementById('toBox').value;
+  if (inputBoxeOrigin === inputBoxeDestination){
+    document.getElementById("showThem").innerHTML = "That goes nowhere, try somthing else";
+  }
+  if (stops.indexOf(inputBoxeDestination) === -1){
+    document.getElementById("showThem").innerHTML = "Invaled Stops";
+  } else {
+    var result = planner(inputBoxeOrigin, inputBoxeDestination);
+  // newTrip.length + " stops total"
+  document.getElementById("showThem").innerHTML = result[0] + "<br><br>" + result[1];
+  }
 
 }
+

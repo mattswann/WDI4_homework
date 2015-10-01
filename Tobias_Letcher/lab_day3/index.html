@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
 <header>
-  <script src='pt_planner.js'></script>
 </header>
 <body>
-
+  <h2>Where do you want to go?</h2>
+  <input type="text" id="fromBox" onkeydown="if (event.keyCode == 13) document.getElementById('btnSearch').click()"/>
+  <input type="text" id="toBox" onkeydown="if (event.keyCode == 13) document.getElementById('btnSearch').click()"/>
+  <input type="button" id="btnSearch" value="Get Directions" onclick="seachIt;" />
+  <h4 id="showThem"> </h4>
 </body>
 
+  <script src='pt_planner.js'></script>
 </html>
