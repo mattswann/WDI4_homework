@@ -1,12 +1,87 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-    <script src="PT Planner.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <title>WDI Journey Planner</title>
+    <style>
+      body {
+        background: url(http://i.imgur.com/UNlhm5C.png);
+        background-size: cover;
+			  background-repeat: no-repeat;
+        color: rgba(255,255,255,.9);
+			  font-family: Open Sans;
+        text-align: center;
+        padding-top: 50px;
+      } h1 {
+        margin-top: 40px;
+        margin-bottom: 45px;
+        font-size: 50px;
+      } h3 {
+        font-size: 18px;
+        margin-top: 50px;
+      } p {
+        font-size: 18px;
+      } select {
+        font-size: 18px;
+        font-family: Open Sans;
+      } button {
+    		font-size: 18px;
+        font-family: Open Sans;
+      }
+    </style>
   </head>
 
   <body>
-    <h1>open the console</h1>
-  </body>
+    <h1>WDI Public Transport Journey Planner</h1>
 
+      <form>
+        <p> I want to go from </p>
+          <select id="originList" style="width:200px;border:0">
+            <option value="" selected disabled>Origin</option>
+            <option>Burnley</option>
+            <option>East Richmond</option>
+            <option>Flagstaff</option>
+            <option>Flinders Street</option>
+            <option>Glenferrie</option>
+            <option>Hawthorn</option>
+            <option>Kooyong</option>
+            <option>Melbourne Central</option>
+            <option>Parliament</option>
+            <option>Prahran</option>
+            <option>Richmond</option>
+            <option>South Yarra</option>
+            <option>Southern Cross</option>
+            <option>Tooronga</option>
+            <option>Windsor</option>
+          </select>
+
+      <form>
+        <p> to </p>
+          <select id="destinationList" style="width:200px;border:0">
+            <option value="" selected disabled>Destination</option>
+            <option>Burnley</option>
+            <option>East Richmond</option>
+            <option>Flagstaff</option>
+            <option>Flinders Street</option>
+            <option>Glenferrie</option>
+            <option>Hawthorn</option>
+            <option>Kooyong</option>
+            <option>Melbourne Central</option>
+            <option>Parliament</option>
+            <option>Prahran</option>
+            <option>Richmond</option>
+            <option>South Yarra</option>
+            <option>Southern Cross</option>
+            <option>Tooronga</option>
+            <option>Windsor</option>
+          </select>
+
+        <p></p>
+          <button id="routeButton" style="width:200px;border-radius:6px;color:white;background:green;border:0">Find route!</button>
+
+      <h3 id="routeDetails"></h3>
+      <h3 id="routeStops"></h3>
+
+    <script src="PT Planner_FINAL.js"></script>
+  </body>
 </html>

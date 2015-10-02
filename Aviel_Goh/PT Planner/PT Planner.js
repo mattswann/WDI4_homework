@@ -24,12 +24,32 @@ var allStations = {
   'Sandringham': ['Southern Cross', 'Richmond', 'South Yarra', 'Prahran', 'Windsor']
 }
 
+var originInputBox = document.getElementById('originInputBox');
+var destinationInputBox = document.getElementById('destinationInputBox');
+var routeButton = document.getElementById('routeButton');
+var origin;
+var destination;
+
+
+var findRoute = function () {
+  origin = originInputBox.value;
+  destination = destinationInputBox.value;
+  journeyDetails(origin, destination);
+}
+
+routeButton.addEventListener('click', findRoute);
+
 function journeyDetails(origin, destination) {
 
+  // var origin = prompt('Where are you?');
+  // var destination = prompt('Where do you want to go?');
+
+  // determine whether origin and destination are the same
   if (origin === destination) {
     console.log('Look up! You are already at ' + origin + '!');
   } else {
 
+  // determine what line the origin is on
   for (i = 0; i < listStations.length; i++) {
     if (listStations.indexOf(origin) >= 10) {
       var originLine = 'Sandringham';
@@ -40,6 +60,7 @@ function journeyDetails(origin, destination) {
     }
   }
 
+  // determine what line the destination is on
   for (i = 0; i < listStations.length; i++) {
     if (destination === 'Richmond') {
       var destinationLine = originLine;
@@ -52,10 +73,22 @@ function journeyDetails(origin, destination) {
     }
   }
 
+  // if origin and destination are on the same line
   if (originLine === destinationLine) {
     var numberOfStopsSameLine = Math.abs((allStations[originLine].indexOf(origin) + 1) - (allStations[destinationLine].indexOf(destination)) - 1);
 
-    var throughStationsSameLine = allStations[originLine].slice((allStations[originLine].indexOf(origin) + 1), allStations[destinationLine].indexOf(destination)).join(' - ');
+// check this! something is not working correctly
+
+  var throughStationsSameLine;
+
+    if (allStations[originLine].indexOf(origin) < allStations[destinationLine].indexOf(destination)) {
+      throughStationsSameLine = allStations[originLine].slice((allStations[originLine].indexOf(origin) + 1), allStations[destinationLine].indexOf(destination)).join(' - ');
+    } else if (allStations[originLine].indexOf(origin) > allStations[destinationLine].indexOf(destination)) {
+      throughStationsSameLine = allStations[originLine].slice((allStations[destinationLine].indexOf(destination) + 1), (allStations[originLine].indexOf(origin))) .join(' - ');
+    }
+
+    // var throughStationsSameLine = allStations[originLine].slice((allStations[originLine].indexOf(origin) + 1), allStations[destinationLine].indexOf(destination)).join(' - ');
+
 
     if (numberOfStopsSameLine === 1) {
       console.log(destination + ' is the next stop.');
@@ -63,9 +96,19 @@ function journeyDetails(origin, destination) {
       console.log('Your journey starting from ' + origin + ' and ending at ' + destination + ' has ' + numberOfStopsSameLine + ' stops.');
       console.log(' You need to go through ' + throughStationsSameLine + ' before arriving at ' + destination + '.');
     }
-  } else {
+  }
+
+  // if destination and origin are NOT on the same line
+  else {
 
     var numberOfStopsDiffLine = Math.abs((allStations[originLine].indexOf(origin) + 1) - (allStations[originLine].indexOf('Richmond')) - 1) + Math.abs((allStations[destinationLine].indexOf('Richmond') - 1) - (allStations[destinationLine].indexOf(destination)) + 1);
+
+    // if (allStations[originLine].indexOf(origin) > allStations[originLine].indexOf('Richmond')) {
+    //   var throughStationsOriginLine = allStations[originLine].slice((allStations[originLine].indexOf(origin) + 1), allStations[originLine].indexOf('Richmond')).join(' - ');
+    // } else {
+    //   var throughStationsOriginLine = allStations[originLine].slice((allStations[originLine].indexOf('Richmond') + 1), allStations[originLine].indexOf(origin)).join(' - ');
+    // }
+
 
     var throughStationsOriginLine = allStations[originLine].slice((allStations[originLine].indexOf(origin) + 1), allStations[originLine].indexOf('Richmond')).join(' - ');
 
@@ -98,3 +141,14 @@ function journeyDetails(origin, destination) {
   }
 }
 */
+
+
+// var stations = [fdsafdsafdsa];
+//
+// var start = "Flinders";
+// var finish = "fdsa";
+//
+// var startIndex = stations.indexOf(start);
+// var finishIndex = stations.indexOf(finish);
+//
+// var journey = stations.slice(startIndex, finishIndex + 1);
