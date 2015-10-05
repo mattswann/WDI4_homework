@@ -39,6 +39,7 @@ img.bigImage {
 ul li {
   display: inline-block;
   border: 5px solid #656565;
+  text-align: left;
 
 }
 
