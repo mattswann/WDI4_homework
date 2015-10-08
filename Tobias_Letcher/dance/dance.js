@@ -1,38 +1,37 @@
 var movePixels = 10;
 var delayMs = 50;
 var catTimer = null;
+var flag = true;
 
-
-// var catWalk = function() {
-//   var img = document.getElementsByTagName('img')[0];
-//   var currentLeft = parseInt(img.style.left, 10);
-//   img.style.left = (currentLeft + movePixels) + 'px';
-//   if (currentLeft > (window.innerWidth - img.width)) {
-//     img.style.left = '0px';
-//   }
-// }
-
-var flag = {
-  postion: true
-}
+  var k = 0;
+  function flip(image) {
+    k += 180;
+    image.style.transform = "rotatey(" + k + "deg)";
+    image.style.transitionDuration = "0.5s"
+    return
+  }
 
 var catWalk = function() {
   var widthGot = document.body.clientWidth;
-  if (flag.postion){
+  if (flag){
   var img = document.getElementsByTagName('img')[0];
+
   var currentLeft = parseInt(img.style.left, 10);
   img.style.left = (currentLeft + movePixels) + 'px';
   if (currentLeft > (widthGot - img.width)) {
-     flag.postion = false;
+     flag = false;
+     img.style.webkitTransform = 'scaleX(-1)';
   } 
   }else {
-    console.log('got');
+    
     var img = document.getElementsByTagName('img')[0];
+    
     var currentLeft = parseInt(img.style.left, 10);
     img.style.left = (currentLeft - movePixels) + 'px';
     console.log(widthGot)
     if (currentLeft <= 1){
-      flag.postion = true;
+      flag= true;
+      img.style.webkitTransform = 'scaleX(1)';
     }
   }
   
@@ -62,3 +61,14 @@ var speedButton = document.getElementById('speed');
 startButton.addEventListener('click', startCatWalk);
 stopButton.addEventListener('click', stopCatWalk);
 speedButton.addEventListener('click', speedCatWalk);
+
+
+// var c = $("canvas")[0];
+// var w = c.width;
+// var h = c.height;
+// var dag = $("img")[0];
+// setTimeout(function () {
+//     c.getContext('2d').drawImage(dag, 0, 0, w, h);
+//     $(dag).hide();
+//     $(c).show();
+// },10000);

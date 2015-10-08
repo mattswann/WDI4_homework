@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+
+background: url('http://i.imgur.com/kBwpn7h.jpg') no-repeat center center fixed;
+
+-webkit-background-size: cover;
+
+-moz-background-size: cover;
+
+-o-background-size: cover;
+
+background-size: cover;
+
+}
+
+@font-face { font-family: Moon; src: url('Moon_Light.otf'); } 
+@font-face { font-family: Moon; font-weight: bold; src: url("Moon_Bold.otf");}
+
+body {
+  margin: 0;
+  text-align: center;
+  font-family: Moon;
+}
+
+.logo{
+  display: inline-block;
+  text-align: left;
+  top: 1%;
+  left: 1%;
+  z-index: 2%;
+}
+
+h1 {
+  display: block;
+  /*text-align: center;*/
+ /* position: fixed;*/
+  font-size: 70px;
+  text-align: center;
+  font-weight: normal;
+
+
+}
+
+#coinColor {
+  color: #c99f3c;
+}
+
+#wow {
+  font-style: italic;
+}
+
+.columns {
+  height: 200px;
+  display: inline-block;
+  margin-top: 7%;
+  margin-bottom: 30%;
+/*  text-align: center;*/
+}
+
+.savings {
+  width: 40%;
+}
+
+input {
+  margin-top: 5%;
+}
+
+.checking {
+  width: 40%;
+}
