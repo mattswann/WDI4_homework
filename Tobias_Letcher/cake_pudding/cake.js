@@ -11,29 +11,42 @@ var track = {
 
 function chechIt(letter){
   if (track.turnsLeft === 0) {
-    document.getElementById("lettersGuessed").innerHTML = "You Lose: refresh the page to try again";
+    document.getElementById("winLose").innerHTML = "You Lose: refresh the page to try again";
     return
   }
+  if ((template[0] === blank[0]) && ((template[1] === blank[1]))) {
+    document.getElementById("winLose").innerHTML = "You WIN, don't you feel good about yourself? Reload the page to play agian";
+    return
+  }
+
   
   if (track.lettersGessed.indexOf(letter) === -1) {
     track.lettersGessed += (letter + ' ');
+    swapLetters(letter);
+  } else {
+    return
   }
   
   if (track.secretWordRecord.indexOf(letter) !== -1) {
-    document.getElementById("lettersRight").innerHTML = track.secretWordDisplay;
+    track.secretWordDisplay += letter;
+    
+      
     if (track.secretWordRecord.indexOf(letter) === -1) {
-      track.secretWordDisplay += letter;
       }
     } else {
         track.turnsLeft -= 1;
         document.getElementById("turns").innerHTML = track.turnsLeft;
         if (track.turnsLeft === 0) {
-        document.getElementById("lettersGuessed").innerHTML = "You Lose: refresh the page to try again";
+        document.getElementById("winLose").innerHTML = "You Lose: refresh the page to try again";
             return
           }
   } 
-
   document.getElementById("lettersGuessed").innerHTML = track.lettersGessed;
+  if ((template[0] === blank[0]) && ((template[1] === blank[1]))) {
+    document.getElementById("winLose").innerHTML = "You WIN, don't you feel good about yourself? Reload the page to play agian";
+    return
+  }
+  
 
 }
 
@@ -45,6 +58,39 @@ function setWord() {
 }
 
 document.getElementById("turns").innerHTML = track.turnsLeft;
+
+
+var template = [];
+var blank = [];
+function displayLetters() {
+  template = track.secretWordRecord.split(' ');
+  blank.push(Array(template[0].length + 1).join('_'));
+  blank.push( Array(template[1].length + 1).join('_'));
+  console.log(template); 
+}
+
+String.prototype.replaceAt=function(index, character) {
+    return this.substr(0, index) + character + this.substr(index+character.length);
+}
+
+function swapLetters(letter){
+  for (var q = 0; q < template[0].length; q++){
+    if (template[0][q].indexOf(letter) === 0){
+      blank[0] = blank[0].replaceAt(q, letter);
+      console.log(blank);
+    }
+  for (var m = 0; m < template[1].length; m++){
+    if (template[1][m].indexOf(letter) === 0){
+      blank[1] = blank[1].replaceAt(m, letter);
+      console.log(blank);
+    }
+  }
+    document.getElementById("lettersRight").innerHTML = (blank[0] + " " + blank[1]);
+  }
+  
+}
+
+
 
 var result;
 result = Mousetrap.bind('a', function(e) {
@@ -129,10 +175,12 @@ result = Mousetrap.bind('z', function(e) {
   chechIt('z');
 });
 
-var names = ["George Washington", "John Adams", "Thomas Jefferson", "James Madison", "James Monroe", "John Quincy Adams", "Andrew Jackson", "Martin Van Buren", "William H. Harr", "John Tyler", "James K. Polk", "Zachary Taylor", "Millard Fillmore", "Franklin Pierce", "James Buchanan", "Abraham Lincoln", "Andrew Johnson", "Ulysses S. Grant", "Rutherford B. Hayes", "James A. Garf", "Chester A. Arthur", "Grover Cleveland", " Benjamin Harrison", "Grover Cleveland", "William McKinley", "Theodore Roosevelt", "William H. Taft", "Woodrow Wilson", "Warren G. Harding", " Calvin Coolidge", "Herbert Hoover", "Franklin D. Roosevelt", "Harry S. Truman", "Dwight D. Eisenhower", "John F. Kennedy", "Lyndon B. Johnson, Richard M. Nixon", "Gerald R. Ford", "Jimmy Carter", "Ronald Reagan", "George H. W. Bush", "Bill Clinton", "George W. Bush", "Barack Hussein Obama"]
+var names = ["George Washington", "John Adams", "Thomas Jefferson", "James Madison", "James Monroe", "John Quincy Adams", "Andrew Jackson", "Martin Buren", "William Harr", "John Tyler", "James Polk", "Zachary Taylor", "Millard Fillmore", "Franklin Pierce", "James Buchanan", "Abraham Lincoln", "Andrew Johnson", "Ulysses Grant", "Rutherford Hayes", "James Garf", "Chester Arthur", "Grover Cleveland", "Benjamin Harrison", "Grover Cleveland", "William McKinley", "Theodore Roosevelt", "William Taft", "Woodrow Wilson", "Warren Harding", "Calvin Coolidge", "Herbert Hoover", "Franklin Roosevelt", "Harry Truman", "Dwight Eisenhower", "John Kennedy", "Lyndon Johnson", "Richard Nixon", "Gerald Ford", "Jimmy Carter", "Ronald Reagan", "George Bush", "Bill Clinton", "George Bush", "Barack Obama"]
 
 setWord()
-document.getElementById("grafic").innerHTML = track.secretWordRecord;
+displayLetters()
+document.getElementById("lettersRight").innerHTML = (blank[0] + " " + blank[1]);
+// document.getElementById("grafic").innerHTML = track.secretWordRecord;
 
 
 // result = mousetrap.bind('a', chechIt('a'));

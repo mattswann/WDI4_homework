@@ -1,22 +1,64 @@
 body {
+  text-align: center;
+}
+
+h1 {
+  position: relative;
+  text-align: center;
+  display: block;
+  font-family: Garamond, serif;
+  font-weight: .8em;
+}
+
+#banner {
+  text-align: center;
+  display: inline-block;
+  background-color: none;
+  width: 60%;
+  /*text-align: center;*/
+}
+img {
+  width: 49%;
+}
+
+
+#winLose { 
+  display: block;
+}
+
+#turnData {
+  /*float: left;*/
+  /*width: 20%;*/
+  text-align: center;
   
 }
 
 #turns {
-  
-
+ display: block;
 }
 
 #letterGuessed {
-
+display: block;
 
 }
 
 #lettersRight {
-
+display: block;
 }
 
-#grafic {
+#headingBanner {
+  background-color: black; 
+}
 
+#bannerCol1 {
+  color: red;
 
 }
+#bannerCol2 {
+  color: white;
+}
+#bannerCol3 {
+  color: blue;
+}
+  
+
