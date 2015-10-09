@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+#container {
+  background-color: black;
+  color: white;
+}
+
+.toppart {
+  margin-top: 25px;
+  margin-left: 16%;
+  margin-right: 11%;
+}
+.livesLeft {
+  padding: 0;
+}
+.livesLeft, .moveRight{
+  margin-left: 85%;
+  padding: 5px;
+  width: 6%;
+}
+
+.moveRight {
+  margin-top: -24px;
+}
+
+.toppart h1 {
+  font-size: 3em;
+}
+
+.heading {
+  margin: 0 auto;
+  max-width: 10em;
+}
+
+.guessing-input {
+  margin: 0 auto;
+  max-width: 16%;
+}
+
+.guessedLetters {
+  font-family: monospace;
+  margin: 0 auto;
+  max-width: 40%;
+  background-color: yellow;
+  color: black;
+  font-size: 2em;
+}
+
+input {
+  width: 5em;
+      height: 100px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 4em;
+}
+
+.dashed {
+  border-style: dashed;
+  border-bottom: 10px;
+  width: 20em;
+}
