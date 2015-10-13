@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+main {
+  margin: 0 auto;
+}
+
+h3 {
+  color: pink;
+}
+
+#slogan {
+  color: plum;
+}
+
+.content {
+  color: tomato;
+}
+
+.secure-msg {
+  color: red;
+}
+
+footer {
+  margin: 0 auto;
+}

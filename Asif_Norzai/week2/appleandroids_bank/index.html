@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kunduz Bank</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="container">
+
+  <header>
+    <h1>KUNDUZ</h1>
+    <h1>DA KUNDUZ BENG</h1>
+  </header>
+  <main>
+    <div class="saving">
+      <h2>SAVINGS</h2>
+      <p>YOUR BALANCE IS...</p>
+      <span class="saving-balance">00.00</span>
+      <input type="number" name='quantity' min='1' placeholder="ENTER AMOUNT HERE" id="saving-input">
+      <button id="saving-withdraw">WITHDRAW</button>
+      <button id="saving-deposit" type="button">DEPOSIT</button>
+    </div>
+    <div class="checking">
+      <h2>CHECKINGS</h2>
+      <p>YOUR BALANCE IS...</p>
+      <span class="checking-balance">00.00</span>
+      <input type="number" name='quantity' min='1' placeholder="ENTER AMOUNT HERE" id="checking-input">
+      <button id="checking-withdraw">WITHDRAW</button>
+      <button id="checking-deposit">DEPOSIT</button>
+    </div>
+  </main>
+  <script src="bank.js"></script>
+</body>
+</html>
