@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+#saving {
+  background-color: pink;
+  width: 50%;
+/* top right bottom left */
+  margin: 0 auto;
+  padding: 5%;
+}
+
+#saving h1 {
+  background-color: plum;
+  text-align: center;
+  margin-top: 0;
+}
+
+#saving .balance {
+  background-color: linen;
+  margin-bottom: 5px;
+  text-align: center;
+
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-bottom: 5px;
+  border: none;
+/*  margin: 5px;*/
+}

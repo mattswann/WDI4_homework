@@ -1,0 +1,93 @@
+
+body {
+/*	background-color: #0099FF;*/
+	background-image: url("links/Texture-Grey.jpg");
+	width: 100%;
+}
+
+.container {
+	margin-top: 10%;
+	text-align: center;
+}
+
+.header {
+	display: inline-block;
+}
+
+.slogan {
+	font-family: Helvetica, Arial;
+	font-size: 20px;
+	color: #FF6600;
+	margin-left: 17px;
+}
+
+button {
+	background-color: #FF6600;
+	color: black;
+}
+
+.balance {
+	font-family: Helvetica, Arial;
+	font-size: 16px;
+	text-align: center;
+}
+
+h2 {
+	text-align: center;
+	font-family: Helvetica, Arial;
+	font-size: 20px;
+}
+
+.buttons {
+	margin-top: 1em;
+}
+
+input {
+	margin-top: 1em;
+}
+
+#savings {
+	display: inline-block;
+	width: 30%;
+	margin: 2%;
+	background-color: white;
+	vertical-align: top;
+	padding: 3%;
+
+}
+
+#cheque {
+	display: inline-block;
+	width: 30%;
+	margin: 2%;
+	background-color: white;
+	vertical-align: top;
+	padding: 3%;
+
+}
+
+footer {
+	font-family: Helvetica, Arial;
+	font-size: 10px;
+	text-align: center;
+	margin: 20px;
+
+}
+
+/*.box {
+	width: 200px;
+	height: 100px;
+	border: 3px solid black;
+	background-color: white;
+}
+
+.position-relative {
+	position: relative;
+}
+
+.position-absolute {
+	position: absolute;
+	left: 10px;
+	top: 50px;
+	bottom: 50px;
+}*/
