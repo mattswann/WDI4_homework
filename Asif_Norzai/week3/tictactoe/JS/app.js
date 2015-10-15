@@ -1,13 +1,25 @@
 
-var player1 = 'Asif';
-var player2 = 'Azad';
+var player1;
+var player2;
+var success_message = $('.success-message');
+
+$(success_message).hide();
+  // $('#first-page').hide();
+$('#first-page-btn').on('click', function () {
+  player1 = $('.input1').val();
+  player2 = $('.input2').val();
+  $('#first-page').fadeOut();
+  $('#second-page').fadeIn();
+});
+
+var successMessasge = $('.alert-success h1');
+
 var isWinner = 0;
 var firstPlayer = $('.player1');
 $(firstPlayer).text(player1);
 var secondPlayer = $('.player2');
 $(secondPlayer).text(player2);
 var turnCount = 0;
-
 
 $('#table').find('td').on('click', function(){
   $(firstPlayer).text('It\'s ' + player1 + 's turns');
@@ -45,7 +57,9 @@ function whoIsWinner(turn, player) {
 //Row 1 check
 if (one.text() === turn) {
   if (one.text() === two.text() && one.text() === three.text()) {
-    alert('Game over!\n' + player + ' has won');
+    $(successMessasge).html('Game over!\n' + player + ' has won');
+    $('#second-page').fadeOut();
+    $(success_message).fadeIn();
     isWinner++;
   }
 }
@@ -53,57 +67,64 @@ if (one.text() === turn) {
 //Row 2 check
 if (four.text() === turn) {
   if (four.text() === five.text() && four.text() === six.text()) {
-    alert('Game over!\n' + player + ' has won');
-    isWinner++;
+    $(successMessasge).html('Game over!\n' + player + ' has won');
+    $('#second-page').hide();
+    $(success_message).fadeIn();
   }
 }
 
 //Row 3 check
 if (seven.text() === turn) {
   if (seven.text() === eight.text() && seven.text() === nine.text()) {
-    alert('Game over!\n' + player + ' has won');
-    isWinner++;
-  }
+    $(successMessasge).html('Game over!\n' + player + ' has won');
+    $('#second-page').hide();
+    $(success_message).fadeIn();
+}
 }
 
 
 //Top to bottom row 1
 if (one.text() === turn) {
   if (one.text() === four.text() && one.text() === seven.text()) {
-    alert('Game over!\n' + player + ' has won');
-    isWinner++;
+    $(successMessasge).html('Game over!\n' + player + ' has won');
+    $('#second-page').hide();
+    $(success_message).fadeIn();
   }
 }
 
 ////Top to bottom row 2
 if (two.text() === turn) {
   if (two.text() === five.text() && two.text() === eight.text()) {
-  alert('Game over!\n' + player + ' has won');
-  isWinner++;
+    $(successMessasge).html('Game over!\n' + player + ' has won');
+    $('#second-page').hide();
+    $(success_message).fadeIn();
   }
 }
 
 //Top to bottom row 3
 if (three.text() === turn) {
   if (three.text() === six.text() && three.text() === nine.text()) {
-  alert('Game over!\n' + player + ' has won');
-    isWinner++;
+    $(successMessasge).html('Game over!\n' + player + ' has won');
+    $('#second-page').hide();
+    $(success_message).fadeIn();
   }
 }
 
 //Left digonal
 if (one.text() === turn) {
   if (one.text() === five.text() && one.text() === nine.text()) {
-    alert('Game over!\n' + player + ' has won');
-    isWinner++;
+    $(successMessasge).html('Game over!\n' + player + ' has won');
+    $('#second-page').hide();
+    $(success_message).fadeIn();
   }
 }
 
 //Right digonal
 if (three.text() === turn) {
   if (three.text() === five.text() && three.text() === seven.text()) {
-    alert('Game over!\n' + player + ' has won');
-    isWinner++;
+    $(successMessasge).html('Game over!\n' + player + ' has won');
+    $('#second-page').hide();
+    $(success_message).fadeIn();
   }
 }
 
@@ -114,6 +135,6 @@ if (turnCount === 8 && isWinner === 0) {
 //End whoIsWinner
 }
 
-// $("button").on('click',function(){
-//   whoIsWinner(winner, player);
+// $(".reset-game").on('click',function(){
+//     location.reload();
 // });
