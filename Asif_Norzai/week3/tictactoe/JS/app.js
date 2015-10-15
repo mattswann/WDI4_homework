@@ -2,18 +2,20 @@
 var player1;
 var player2;
 var success_message = $('.success-message');
-
+var tieMessagePage = $('.tie-message');
+$(tieMessagePage).hide();
 $(success_message).hide();
-  // $('#first-page').hide();
+  $('#second-page').hide();
 $('#first-page-btn').on('click', function () {
   player1 = $('.input1').val();
   player2 = $('.input2').val();
+  $(firstPlayer).text('It\'s ' + player1 + '\'s turns');
   $('#first-page').fadeOut();
   $('#second-page').fadeIn();
 });
 
 var successMessasge = $('.alert-success h1');
-
+var tieMessagePrint = $('.alert-danger h1')
 var isWinner = 0;
 var firstPlayer = $('.player1');
 $(firstPlayer).text(player1);
@@ -21,20 +23,22 @@ var secondPlayer = $('.player2');
 $(secondPlayer).text(player2);
 var turnCount = 0;
 
+
 $('#table').find('td').on('click', function(){
-  $(firstPlayer).text('It\'s ' + player1 + 's turns');
   if (turnCount % 2 === 0){
     $(this).text('X');
     whoIsWinner('X', player1);
-    $(secondPlayer).text('It\'s ' + player2 + 's turns');
+    $(secondPlayer).text('It\'s ' + player2 + '\'s turns');
     $(firstPlayer).hide().fadeOut();
     $(secondPlayer).show().fadeIn();
+    $(this).attr('disabled', true);
   } else {
     $(this).text('O');
     whoIsWinner('O', player2);
-    $(firstPlayer).text('It\'s ' + player1 + 's turns');
+    $(firstPlayer).text('It\'s ' + player1 + '\'s turns');
     $(secondPlayer).hide().fadeOut();
     $(firstPlayer).show().fadeIn();
+    $(this).attr('disabled', true);
   }
 turnCount++;
 console.log(turnCount);
@@ -51,9 +55,7 @@ var seven = $('.seven');
 var eight = $('.eight');
 var nine = $('.nine');
 
-
 function whoIsWinner(turn, player) {
-
 //Row 1 check
 if (one.text() === turn) {
   if (one.text() === two.text() && one.text() === three.text()) {
@@ -129,12 +131,17 @@ if (three.text() === turn) {
 }
 
 if (turnCount === 8 && isWinner === 0) {
-  alert('It\'s a tie');
+  $('#second-page').hide();
+  $(tieMessagePage).fadeIn();
+  $(tieMessagePrint).text('It\'s a tie\n Try Again\n By clicking the red button');
+  $(".reset-game").on('click',function(){
+      location.reload();
+  });
 }
 
 //End whoIsWinner
 }
 
-// $(".reset-game").on('click',function(){
-//     location.reload();
-// });
+$(".reset-game").on('click',function(){
+    location.reload();
+});
