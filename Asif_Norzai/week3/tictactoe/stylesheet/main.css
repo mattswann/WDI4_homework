@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+
+#container {
+  background-color: linen;
+  margin: 10% auto;
+  width: 25%;
+}
+
+/* First Page */
+button#first-page-btn {
+    width: 63%;
+    margin-top: 47px;
+}
+
+input.input1 {
+    display: block;
+    width: 194%;
+    height: 44px;
+    margin-bottom: 10px;
+    /* border-radius: 0 2px 4px 2px; */
+    border-radius: 9px 9px 9px 9px;
+    background-color: black;
+    color: #FFF118;
+}
+
+input.input2 {
+    display: block;
+    width: 194%;
+    height: 44px;
+    margin-bottom: 10px;
+    /* border-radius: 0 2px 4px 2px; */
+    border-radius: 9px 9px 9px 9px;
+    background-color: black;
+    color: #FFF118;
+}
+
+
+
+/* Second Page */
+td {
+border: 1px solid black;
+height: 50px;
+width: 50px;
+margin-right: 10px;
+margin-top: 4%;
+}
+
+.btn {
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+}
+
+table {
+  margin-top: 15px;
+  margin-left: 1%;
+  width: 331px;
+  height: 171px;
+}
+
+header h1 {
+text-align: center;
+margin-top: 10px;
+}
+
+h1.player1 {
+margin: 0 10px;
+float: left;
+}
+
+h1.player2 {
+margin: 0;
+}
+
+button.reset-game {
+    width: 331px;
+    margin: 0 auto;
+}
