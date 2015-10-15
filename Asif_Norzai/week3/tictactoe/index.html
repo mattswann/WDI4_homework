@@ -6,14 +6,15 @@
   <script src="JS/jquery.js" charset="utf-8"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <script src="JS/bootbox.min.js" charset="utf-8"></script>
   <link rel="stylesheet" href="stylesheet/main.css">
 </head>
 <body id="container">
-
+  <header>
+    <h1>TICTACTOE</h1>
+  </header>
 
 <!---First Page Starts -->
-<div id="first-page">
+<div id="first-page" class="jumbotron">
   <div class="input-group input-group-lg">
   <input type="text" class="input1" placeholder="Player">
   <input type="text" class="input2" placeholder="Player">
@@ -24,9 +25,6 @@
 
 <!---Second Page Starts -->
 <div id="second-page">
-  <header>
-    <h1>TICTACTOE</h1>
-  </header>
   <div id="table">
   <table>
     <tr>
@@ -61,6 +59,19 @@
    <div class="alert alert-success" role="alert">
      <h1></h1>
    </div>
+   <section id="button">
+   <button class="reset-game btn-danger">Reset The Game</button>
+   </section>
+</div>
+
+<!--- Tie Page Starts -->
+<div class="jumbotron tie-message">
+   <div class="alert alert-danger" role="alert">
+     <h1></h1>
+   </div>
+   <section id="button">
+   <button class="reset-game btn-danger">Reset The Game</button>
+   </section>
 </div>
   <script src="JS/app.js" charset="utf-8"></script>
 </body>
