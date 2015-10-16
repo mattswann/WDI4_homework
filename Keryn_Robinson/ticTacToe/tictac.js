@@ -6,11 +6,7 @@ var chooseX = document.getElementById("chooseX");
 
 var chooseO = document.getElementById("chooseO");
 
-
-// set variable to first square
-// var square0 = document.getElementsByClassName("square")[0];
-
-var squareClicked = document.getElementsByClassName("square")
+var squareClicked = document.getElementsByClassName("square") // maybe not needed
 
 var gameBoard = document.getElementById("gameboard");
 

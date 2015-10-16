@@ -3,7 +3,16 @@ body {
   background-color: #00FFFF;
 }
 
-button {
+#chooseX  {
+  height: 2em;
+  width: 2em;
+  font-size: 18px;
+  margin-bottom: 10px;
+  background-color: #FFCC00;
+  border: none;
+}
+
+#chooseO  {
   height: 2em;
   width: 2em;
   font-size: 18px;
@@ -30,4 +39,16 @@ button {
 #gameboard {
   display: inline block;
   max-width: 90%;
+}
+
+#resetBtn {
+  background-color: #6699FF;
+  color: black;
+  border: none;
+  height: 2em;
+}
+
+#reset {
+  padding-top: 1em;
+  clear: both;
 }
