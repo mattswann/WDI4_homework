@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cake Pudding Hang Man</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body id="container">
+  <h1 class="heading">GUESS THE CITY!</h1>
+  <main>
+    <section class="toppart">
+      <header>
+        Letters Guessed:
+      </header>
+      <header class="livesLeft">
+        Turns Left: <h3 class="moveRight"></h3>
+      </header>
+    </section>
+    <section>
+      <h1 class="guessedLetters">
+        A B C D E
+      </h1>
+    </section>
+    <section class="guessing-input">
+      <input type="text" onkeypress="myKeyPress(event)">
+      <div class="dashed">
+      </div>
+      <!-- <input type="button" onclick="myFunction()" value="Reset form"> -->
+      <!-- <div class="triedLett">TriedList: </div> -->
+    </section>
+  </main>
+  <script src="underscore.js" charset="utf-8"></script>
+  <script src="cakepudding.js" charset="utf-8"></script>
+</body>
+</html>

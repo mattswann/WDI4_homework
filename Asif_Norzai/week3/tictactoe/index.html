@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tic Tac Toe Game</title>
+  <script src="JS/jquery.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="stylesheet/main.css">
+</head>
+<body id="container">
+  <header>
+    <h1>TICTACTOE</h1>
+  </header>
+
+<!---First Page Starts -->
+<div id="first-page" class="jumbotron">
+  <div class="input-group input-group-lg">
+  <input type="text" class="input1" placeholder="Player">
+  <input type="text" class="input2" placeholder="Player">
+  </div>
+  <button id = 'first-page-btn' class="btn btn-primary btn-lg firstpagebtn">Click to Play</button>
+</div>
+
+
+<!---Second Page Starts -->
+<div id="second-page">
+  <div id="table">
+  <table>
+    <tr>
+        <td class="btn one btn-primary"></td>
+        <td class="btn two btn-primary"></td>
+        <td class="btn three btn-primary"></td>
+    </tr>
+    <tr>
+        <td class="btn four btn-primary"></td>
+        <td class="btn five btn-primary"></td>
+        <td class="btn six btn-primary"></td>
+    </tr>
+    <tr>
+        <td class="btn seven btn-primary"></td>
+        <td class="btn eight btn-primary"></td>
+        <td class="btn nine btn-primary"></td>
+    </tr>
+</table>
+</div>
+
+<section class="names">
+  <h1 class="player1"></h1>
+  <h1 class="player2"></h1>
+</section>
+<section id="button">
+<button class="reset-game btn-danger">Reset The Game</button>
+</section>
+</div>
+
+<!---Success Page Starts -->
+<div class="jumbotron success-message">
+   <div class="alert alert-success" role="alert">
+     <h1></h1>
+   </div>
+   <section id="button">
+   <button class="reset-game btn-danger">Reset The Game</button>
+   </section>
+</div>
+
+<!--- Tie Page Starts -->
+<div class="jumbotron tie-message">
+   <div class="alert alert-danger" role="alert">
+     <h1></h1>
+   </div>
+   <section id="button">
+   <button class="reset-game btn-danger">Reset The Game</button>
+   </section>
+</div>
+  <script src="JS/app.js" charset="utf-8"></script>
+</body>
+</html>

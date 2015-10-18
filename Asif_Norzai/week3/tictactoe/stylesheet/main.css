@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
+#container {
+  background-color: linen;
+  margin: 10% auto;
+  width: 25%;
+  background-image: url(/images/textures-wallpapers-507-original-background-wall-stains-texture-background-images.jpg);
+  background-size: cover;
+}
+
+header h1 {
+  text-align: center;
+  margin-top: -93px;
+  background-color: tan;
+  box-shadow: 5px 3px 0px black;
+  font-size: 4em;
+  width: 89%;
+}
+
+/* First Page */
+.jumbotron {
+  background: transparent;
+}
+
+button#first-page-btn {
+  width: 289px;
+  margin-top: 47px;
+  font-size: 3em;
+  position: absolute;
+  box-shadow: 5px 3px 0px black;
+}
+
+input.input1 {
+    display: block;
+    width: 194%;
+    height: 44px;
+    margin-bottom: 10px;
+    /* border-radius: 0 2px 4px 2px; */
+    border-radius: 9px 9px 9px 9px;
+    background-color: black;
+    color: darkorange;
+    font-family: monospace;
+    border: 3px dashed gold;
+}
+
+input.input2 {
+  display: block;
+  width: 194%;
+  height: 44px;
+  margin-bottom: 10px;
+  /* border-radius: 0 2px 4px 2px; */
+  border-radius: 9px 9px 9px 9px;
+  background-color: black;
+  color: darkorange;
+  font-family: monospace;
+  border: 3px dashed gold;
+}
+
+
+
+/* Second Page */
+td {
+border: 1px solid black;
+height: 50px;
+width: 50px;
+margin-right: 10px;
+margin-top: 4%;
+}
+
+.btn {
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+}
+
+table {
+  margin-top: 15px;
+  margin-left: 1%;
+  width: 331px;
+  height: 171px;
+}
+
+h1.player1 {
+margin: 0 10px;
+float: left;
+}
+
+h1.player2 {
+margin: 0;
+}
+
+button.reset-game {
+  width: 331px;
+  margin: 3px auto;
+}
+
+/* Success Message Page */
+.alert-success {
+  box-shadow: 5px 3px 0px black;
+  width: 98%;
+}
+
+/* Tie Message Page */
+.jumbotron {
+  width: 92%;
+}
