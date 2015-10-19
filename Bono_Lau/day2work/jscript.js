@@ -19,30 +19,36 @@ if (firstNum > secondNum){
 }
 /*the world translator*/
 function helloWorld(lanCode){
+  var h;
 if (lanCode === 'fr'){
-  console.log('Bonjour!');
+  h = 'Bonjour!';
 } else if (lanCode === 'esp'){
-  console.log('blah...blah...blah');
+  h = 'blah...blah...blah';
 } else if (lanCode === 'chn'){
-  console.log('nihao!');
+  h = 'nihao!';
 }else {
-  console.log('Hello,World!');
+  h = 'Hello,World!';
 }
+console.log(h);
+return h;
 }
 
 /*the grade assigner*/
 function assignGrade(score){
-    if (score>=90 & score<=100){
-      console.log('You get Grade A!');
-    }else if (score>=80 && score <90){
-      console.log('You get Grade B!');
-    }else if (score>=70 && score<80){
-      console.log('You get Grade C!');
-    }else if (score>=60 && score<70){
-      console.log('You get Grade D!');
+    var grade;
+    if (score>=90){
+      grade = 'A';
+    }else if (score>=80){
+       grade = 'B';
+    }else if (score>=70){
+       grade = 'C';
+    }else if (score>=60){
+       grade = 'D';
     }else{
       console.log('You are failed!');
     }
+     console.log('You get Grade'+grade+'!');
+    return grade;
 }
 
 /*pluralize*/
@@ -60,7 +66,7 @@ if (num >1){
 
 /*multiplication tables*/
 var result = [];
-for (var i=0; i<10; i++){
+for (var i=0; i<=10; i++){
   result[i] = i*9;
   console.log(result[i]);
 }
