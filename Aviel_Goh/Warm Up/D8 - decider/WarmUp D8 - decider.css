@@ -1,0 +1,45 @@
+body {
+  background-color: white;
+  color: black;
+  font-family: Roboto Condensed;
+  text-align: center;
+}
+
+.button {
+  background: url("decider.gif");
+  background-size: cover;
+  display: block;
+  position: fixed;
+  height: 20em;
+  width: 20em;
+
+}
+
+.button:active {
+  background: url("decider.gif");
+  background-size: cover;
+  display: block;
+  position: fixed;
+  height: 20em;
+  width: 20em;
+
+}
+
+.result {
+  /*border: 2px solid green;*/
+  display: inline-block;
+  height: 10%;
+  width: 10%;
+  padding-top: 2em;
+}
+
+.counter {
+  font-size: 1.5em;
+}
+
+#display-result {
+  display: inline-block;
+  height: 10%;
+  width: 60%;
+  font-size: 3em;
+}

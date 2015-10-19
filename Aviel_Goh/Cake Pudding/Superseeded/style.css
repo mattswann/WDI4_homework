@@ -1,0 +1,91 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: Roboto;
+  text-align: center;
+  margin: 0 auto;
+  text-transform: uppercase;
+  /*max-width: 90%;*/
+}
+
+.keyboard {
+  position: fixed;
+  bottom: 2em;
+  max-height: 50%;
+}
+
+input {
+  display: inline-block;
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+  font-size: 1em;
+  height: 0.5em;
+  width: 0.5em;
+  padding: 2em;
+  margin: 0.5em;
+}
+
+input:active {
+  display: inline-block;
+  border: 1px solid white;
+  background-color: white;
+  color: black;
+  font-size: 1em;
+  height: 0.5em;
+  width: 0.5em;
+  padding: 2em;
+  margin: 0.5em;
+}
+
+#startGame {
+  width: 10em;
+  text-align: center;
+  margin-top: 1.5em;
+  display: inline-block;
+  font-size: 2em;
+}
+
+#guess {
+  /*border: 1px solid red;*/
+  text-align: left;
+  position: fixed;
+  top: 5em;
+  left: 2em;
+}
+
+#remaining {
+  /*border: 1px solid red;*/
+  text-align: right;
+  position: fixed;
+  top: 5em;
+  right: 2em;
+}
+
+#displaySelectedLetters {
+  /*border: 1px solid green;*/
+  font-size: 2em;
+  text-align: left;
+  position: fixed;
+  top: 2.5em;
+}
+
+#displayTurnsRemaining {
+  /*border: 1px solid green;*/
+  font-size: 2em;
+  text-align: center;
+  position: fixed;
+  top: 2.5em;
+  width: 5em;
+}
+
+#guessWord {
+  height: 10%;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  /*border: 1px solid green;*/
+  font-size: 3.5em;
+  position: fixed;
+  bottom: 50%;
+}

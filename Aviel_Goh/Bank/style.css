@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(background.jpg);
+  background-size: cover;
+  font-family: Roboto;
+  text-align: center;
+}
+
+header {
+  background-color: white;
+  color: black;
+  height: 125px;
+  padding: 10px;
+
+}
+
+h1 {
+  margin: 0;
+  padding: 10px;
+  font-size: 75px;
+  position: relative;
+}
+
+h2 {
+
+}
+
+#logo{
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 10;
+  height: 125px;
+  width: 125px;
+}
+
+main {
+  color: white;
+}
+.accounts {
+  border: 2px solid white;
+  border-radius: 15px;
+  height: 250px;
+  width: 250px;
+  margin: 5%;
+  display: inline-block;
+  position: relative;
+  background-color: black;
+}
+
+.account-name {
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bolder;
+  color: rgb(255, 0, 56);
+}
+
+.balance {
+  position: absolute;
+  height: 45px;
+  width: 90%;
+  bottom: 47.5%;
+  right: 5%;
+  font-size: 40px;
+  display: block;
+}
+
+#your-balance {
+  font-size: 15px;
+  bottom: 60%;
+  right: 5%;
+}
+
+.input-bar {
+  position: absolute;
+  height: 40px;
+  width: 90%;
+  bottom: 22.5%;
+  right: 5%;
+  font-size: 30px;
+}
+
+.buttons {
+  border: 2px solid white;
+  border-radius: 8px;
+  height: 25px;
+  width: 40%;
+  display: inline-block;
+  font-size: 12px;
+  color: white;
+  padding: 0;
+  outline: 0;
+}
+
+.withdraw-button {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  background-color: rgb(255, 0, 56);
+}
+
+.withdraw-button:active {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  background-color: rgba(255, 0, 56, 0.5);
+}
+
+.deposit-button {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  background-color: darkgreen;
+}
+
+.deposit-button:active {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  background-color: rgba(0, 100, 0, 0.5);
+}
+
+
+#insufficient-funds {
+  color: rgb(255, 0, 56);
+  font-size: 50px;
+
+}

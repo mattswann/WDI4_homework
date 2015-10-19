@@ -1,0 +1,25 @@
+body {
+  text-align: center;
+}
+
+.box {
+  border: 0;
+  position: absolute;
+  right: 25%;
+  width: 30%;
+  top: 25%;
+  height: 30%;
+  padding: 10%;
+  font-size: 32px;
+  color: green;
+}
+
+.button {
+  background: url("http://grasshopper.com/assets/img/png/resources/tools/8-ball.png");
+  background-size: cover;
+  display: inline-block;
+
+  height: 500px;
+  width: 500px;
+  position: relative;
+}

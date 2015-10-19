@@ -1,0 +1,45 @@
+/*
+
+## Style Hints:
+
+Body Font Size = 12px
+	 Line Height = 17px
+	 Font Family = "Times New Roman", serif
+	 Font Color = #656565
+
+Link Hover Color = #20222a
+
+*/
+
+h1 {
+	color: rgb(153, 153, 153);
+}
+
+h2 {
+	color: rgb(92, 92, 92);
+}
+
+p {
+	font-size: 13.5px;
+	color: rgb(139, 139, 139);
+}
+
+a {
+	color: rgb(85, 136, 161);
+	text-decoration: none;
+}
+
+#date {
+	color: rgb(85, 136, 161);
+}
+
+.magazine-bar img {
+	border: 5px solid;
+	border-color: rgb(204, 204, 204);
+	padding: 2px;
+}
+
+footer {
+	font-size: 14px;
+	color: rgb(139, 139, 139);
+}
