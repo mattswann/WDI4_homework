@@ -26,7 +26,8 @@
         font-family: Open Sans;
       } button {
     		font-size: 18px;
-        font-family: Open Sans;
+        font-family: Open Sans
+        display: block;
       }
     </style>
   </head>
@@ -34,8 +35,8 @@
   <body>
     <h1>WDI Public Transport Journey Planner</h1>
 
-      <form>
-        <p> I want to go from </p>
+      <div>
+        <p> I want to leave from </p>
           <select id="originList" style="width:200px;border:0">
             <option value="" selected disabled>Origin</option>
             <option>Burnley</option>
@@ -54,9 +55,10 @@
             <option>Tooronga</option>
             <option>Windsor</option>
           </select>
+      </div>
 
-      <form>
-        <p> to </p>
+      <div>
+        <p> and go to </p>
           <select id="destinationList" style="width:200px;border:0">
             <option value="" selected disabled>Destination</option>
             <option>Burnley</option>
@@ -75,9 +77,12 @@
             <option>Tooronga</option>
             <option>Windsor</option>
           </select>
+      </div>
 
-        <p></p>
-          <button id="routeButton" style="width:200px;border-radius:6px;color:white;background:green;border:0">Find route!</button>
+      <br> <!-- line break -->
+      <div>
+          <button id="routeButton" type="button" style="width:200px;border-radius:6px;color:white;background:green;border:0">Show journey!</button>
+      </div>
 
       <h3 id="routeDetails"></h3>
       <h3 id="routeStops"></h3>

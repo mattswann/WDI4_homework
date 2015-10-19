@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bank</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+  <header>
+    <h1>WDI Bank</h1>
+
+    <img id="logo" src="logo.png" alt="">
+
+  </header>
+
+<main>
+  <div class="accounts">
+    <div class="account-name">Savings</div>
+    <div id="your-balance" class="balance">Your balance is:</div>
+    <div id="savings-balance" class="balance">$0.00</div>
+    <input id="inputBar-savings" class="input-bar" type="number">
+    <button id="withdrawButton-savings" class="buttons withdraw-button" type="button">Withdraw</button>
+    <button id="depositButton-savings" class="buttons deposit-button" type="button">Deposit</button>
+
+
+  </div>
+
+  <div class="accounts">
+  <div class="account-name">Cheque</div>
+    <div id="your-balance" class="balance">Your balance is:</div>
+    <div id="checking-balance" class="balance">$0.00</div>
+    <input id="inputBar-checking" class="input-bar" type="number">
+    <button id="withdrawButton-checking" class="buttons withdraw-button" type="button">Withdraw</button>
+    <button id="depositButton-checking" class="buttons deposit-button" type="button">Deposit</button>
+
+  </div>
+</main>
+
+<div id="insufficient-funds"></div>
+
+
+
+
+  <script src="bank.js"></script>
+</body>
+</html>

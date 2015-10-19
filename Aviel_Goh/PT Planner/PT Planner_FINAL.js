@@ -34,13 +34,24 @@ var origin;
 var destination;
 
 // Function findRoute listens for mouse click on routeButton and runs journeyDetails function
-var findRoute = function () {
+var findRoute = function() {
   origin = originInputBox.value;
   destination = destinationInputBox.value;
   journeyDetails(origin, destination);
 };
 
+// Event listeners for click or enter key
 routeButton.addEventListener('click', findRoute);
+destinationInputBox.addEventListener("keydown", function (e) {
+  if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
+    findRoute();
+  }
+});
+routeButton.addEventListener("keydown", function (e) {
+  if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
+    findRoute();
+  }
+});
 
 // Function journeyDetails runs user inputs to determine throughStations and numberOfStops
 function journeyDetails(origin, destination) {
@@ -57,7 +68,7 @@ function journeyDetails(origin, destination) {
 
   // Function originLine returns the line of the origin station
   function originLine() {
-    for (i = 0; i < allStations.length; i++) {
+    for (i = 0; i < allStations.length; i += 1) {
       if (allStations.indexOf(origin) >= 12) {
         return 'Sandringham';
       } else if (allStations.indexOf(origin) >= 6) {
@@ -72,7 +83,7 @@ function journeyDetails(origin, destination) {
 
   // Function destinationLine returns the line of the destination station
   function destinationLine() {
-    for (i = 0; i < allStations.length; i++) {
+    for (i = 0; i < allStations.length; i += 1) {
       if (allStations.indexOf(destination) >= 12) {
         return 'Sandringham';
       } else if (allStations.indexOf(destination) >= 6) {
@@ -135,7 +146,9 @@ function journeyDetails(origin, destination) {
     document.getElementById('routeDetails').innerHTML = 'Your journey starting at ' + origin + ' and ending at ' + destination + ' has ' + numberOfStops + ' stops with a changeover at Richmond.';
     document.getElementById('routeStops').innerHTML = throughStations.join(' --- ');
   }
-  }
-};
+  };
+}
+
+
 
 // DO SOMETHING AS SOON AS THE STATIONS ARE SELECTED??
