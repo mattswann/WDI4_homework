@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cake Pudding</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+  <input id="startGame" type="button" class="notifications" onclick="blankWord()" value="START GAME">
+
+  <div id="guess" class="notifications">Letters guessed
+    <p id="displaySelectedLetters"></p>
+  </div>
+
+  <div id="remaining" class="notifications">Remaining guesses
+    <p id="displayTurnsRemaining">10</p>
+  </div>
+
+  <div id="guessWord"></div>
+  <div class="keyboard">
+
+    <input type="button" onclick="guessedLetter('A')" value="A">
+    <input type="button" onclick="guessedLetter('B')" value="B">
+    <input type="button" onclick="guessedLetter('C')" value="C">
+    <input type="button" onclick="guessedLetter('D')" value="D">
+    <input type="button" onclick="guessedLetter('E')" value="E">
+    <input type="button" onclick="guessedLetter('F')" value="F">
+    <input type="button" onclick="guessedLetter('G')" value="G">
+    <input type="button" onclick="guessedLetter('H')" value="H">
+    <input type="button" onclick="guessedLetter('I')" value="I">
+    <input type="button" onclick="guessedLetter('J')" value="J">
+    <input type="button" onclick="guessedLetter('K')" value="K">
+    <input type="button" onclick="guessedLetter('L')" value="L">
+    <input type="button" onclick="guessedLetter('M')" value="M">
+    <input type="button" onclick="guessedLetter('N')" value="N">
+    <input type="button" onclick="guessedLetter('O')" value="O">
+    <input type="button" onclick="guessedLetter('P')" value="P">
+    <input type="button" onclick="guessedLetter('Q')" value="Q">
+    <input type="button" onclick="guessedLetter('R')" value="R">
+    <input type="button" onclick="guessedLetter('S')" value="S">
+    <input type="button" onclick="guessedLetter('T')" value="T">
+    <input type="button" onclick="guessedLetter('U')" value="U">
+    <input type="button" onclick="guessedLetter('V')" value="V">
+    <input type="button" onclick="guessedLetter('W')" value="W">
+    <input type="button" onclick="guessedLetter('X')" value="X">
+    <input type="button" onclick="guessedLetter('Y')" value="Y">
+    <input type="button" onclick="guessedLetter('Z')" value="Z">
+
+
+  </div>
+
+  <script src="cakepudding.js"></script>
+
+</body>
+</html>

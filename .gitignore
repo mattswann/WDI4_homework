@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 # Ignore Mac DS_Store files
 .DS_Store
 **/.DS_Store
 # Google Drive files
 desktop.ini
+=======
+.DS_Store
+>>>>>>> 15b88c28abe276371b81a8f1645e4f67b5c7cf26
