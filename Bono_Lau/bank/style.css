@@ -1,0 +1,65 @@
+body
+{
+  margin: 0 auto;
+ background-image: url(./background.jpg);
+/*-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;*/
+background-size: cover;
+background-repeat: no-repeat;
+
+}
+
+.header img{
+  float: left;
+  width: 12em;
+  background-color: black;
+border-radius: 10%;  
+}
+
+.header h1{
+  margin-top: 2em;
+  float: right;
+  width: 80%;
+  height: 5%;
+font-family: 'Oswald',serif;
+color: rgb(204, 204, 204);
+}
+.box{
+  text-align: center;
+  margin-top: 100px;
+}
+.saving{
+  width: 180px;
+  height: 280px;
+  border: 5px solid grey;
+  text-align: center; 
+  width: 30%;
+  display: inline-block;
+  margin: 40px;
+  background-color: rgb(102, 153, 255);
+  border-radius: 10%;
+  /* use vertical align the keep the boxes remain on the top when using inline-block*/
+  vertical-align: top;
+}
+.checking{
+  background-color: rgb(102, 153, 255);
+   width: 180px;
+  height: 280px;
+  border: 5px solid grey;
+  text-align: center;
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+  margin: 40px;
+  border-radius: 10%;
+}
+
+.input{
+  margin: 80px;
+width: 80px;
+}
+.button{
+  margin-top: 80px;
+  background-color: grey;
+}
