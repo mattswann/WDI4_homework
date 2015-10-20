@@ -1,0 +1,30 @@
+.container {
+	max-width: 60%;
+	margin: 0 auto;
+	border: 1px solid;
+}
+
+.ball {
+	max-width: 100%;
+	border: 1px solid;
+	position: relative;
+}
+
+#message {
+	color: yellow;
+	text-align: center;
+	position: absolute;
+	top: 1em;
+}
+
+.image {
+	border: 1px solid;
+}
+
+img {
+	max-width: 100%;
+}
+
+#shake-btn {
+	margin: 0 auto;
+}

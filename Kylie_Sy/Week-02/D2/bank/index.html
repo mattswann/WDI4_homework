@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Fakewealth Bank</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<header>
+		<div class="h-container">
+			<div class="title">
+				<h1>FakewealthBank</h1>
+			</div>
+			<div class="logo">
+				<img src="logo.png" alt="">
+			</div>
+		</div>
+	</header>
+
+	<div class="container">
+		
+		<div class="box savings"><h3>Savings</h3>
+			<h5>Balance</h5>
+			<div id="savBalance">$0.00</div>
+			<input type="text" placeholder="amount">
+			<button>Withdraw</button>
+			<button>Deposit</button>
+		</div>
+
+
+		<div class="box current"><h3>Current</h3>
+			<h5>Balance</h5>
+			<div id="currBalance">$0.00</div>
+			<input type="text" placeholder="amount">
+			<button>Withdraw</button>
+			<button>Deposit</button>
+		</div>
+	</div>
+
+	<p id="error-msg"></p>
+
+<script src="bank.js"></script>
+</body>
+</html>
