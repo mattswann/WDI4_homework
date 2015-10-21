@@ -1,0 +1,125 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: Helvetica, sans-serif;
+}
+
+h5 {
+	font-weight: normal;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+header {
+	max-width: 100%;
+	/*background-color: gray;*/
+
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#5d5d5d), to(#9d9d9d));
+	background: -webkit-linear-gradient(0% 0%, 0% 100%, from(#ffeb7f), to(#ffd700));
+	background: -moz-linear-gradient(center top, #ffeb7f, #ffd700);
+	border-radius: 5px;
+	border: 1px #cccccc solid;
+	padding: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+h1 {
+	font-size: 40px;
+	line-height: 0;
+	padding-top: 10px;
+}
+
+.h-container {
+	position: relative;
+	max-width: 400px;
+	margin: 0 auto;
+	overflow: auto;
+}
+
+.title, .logo {
+	min-height: 70px;
+	float: left;
+}
+
+.title {
+	width: 320px;
+	margin-right: 10px;
+}
+
+.logo {
+	width: 70px;
+}
+
+header img {
+	max-width: 100%;
+}
+
+.header-font{
+	font-weight: normal;
+}
+
+.container {
+	max-width: 80%;
+	margin: 0 auto;
+	overflow: auto;  /*force container to height of floated elements*/ 
+}
+
+.box {
+	border-radius: 5px 5px 20px 5px;
+	background-color: #dfdfde;
+	border: 1px #cccccc solid;
+	padding: 10px;
+	margin-right: 5%; 
+	text-align: center;
+	float: left;
+	width: 47%;
+}
+
+.box.current {
+	margin-right: 0;
+}
+
+input {
+	max-width: 100%;
+	display: block;
+	margin-bottom: 1em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+button {
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffeb7f), to(#ffd700));
+	background: -webkit-linear-gradient(0% 0%, 0% 100%, from(#ffeb7f), to(#ffd700));
+	background: -moz-linear-gradient(center top, #ffeb7f, #ffd700);
+	border: 1px #cccccc solid;
+	box-shadow: -2px 2px 5px #888888;
+}
+
+#error-msg {
+	text-align: center;
+	background-color: #ffcccc;
+	max-width: 50%;
+	margin: 10px auto;
+	display: none;
+}
+
+/* media queries */
+@media all and (max-width: 30em) {
+
+	.box {
+		width: 100%;
+	}
+
+	.box.savings {
+		margin-bottom: 10px;
+	}
+
+	.header-content {
+		text-align: center;
+	}
+
+}
