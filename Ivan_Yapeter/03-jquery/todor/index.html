@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Todor</title>
+  <style>
+
+  .done {
+    text-decoration: line-through;
+  }
+
+  .undone {
+    text-decoration: none;
+  }
+  
+  </style>
+</head>
+<body>
+  <div class="container">
+    <input id="new-todo-input" type="text">
+    <button id="add-todo-btn">Add todo</button>
+
+    <h2>Todos</h2>
+    <ul class="todos">
+      <li>eat breakfast</li>
+      <li>eat brunch</li>
+      <li>eat lunch</li>
+    </ul>
+
+    <h2>Completed</h2>
+    <!-- <ul class="todos"> --> <!--  Technique 1  -->
+    <ul id="completed-list">
+    </ul>
+
+  </div>
+
+  <script type="text/javascript" src="underscore-min.js"></script>
+  <script type="text/javascript" src="jquery-min.js"></script>
+  <script type="text/javascript" src="app-jquery.js"></script>
+</body>
+</html>

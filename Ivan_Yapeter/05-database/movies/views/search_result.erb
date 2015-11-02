@@ -1,0 +1,13 @@
+<div class="text-center">
+  <% @result.each do |movies| %>
+    <!-- Check if its a movie and list it else end it -->
+    <% if movies["Type"] == "movie" %>
+      <% @title = movies["Title"].gsub(/[ ]/, '-') %>
+      <% title = movies["Title"] %>
+      <% @imdbid = movies["imdbID"] %>
+      <% @poster = movies["Poster"]%>
+      <a href="/movie/<%= @title %>/<%= @imdbid %>" class="movie-title"><h3> <%= title %> </h3></a>
+      <a href="/movie/<%= @title %>/<%= @imdbid %>"><img src="<%= @poster %>" alt="<% @title %> image"></a>
+    <% end %>
+  <% end %>
+</div>

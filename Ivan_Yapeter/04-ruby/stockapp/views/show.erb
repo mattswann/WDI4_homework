@@ -1,0 +1,81 @@
+<div class="container text-center">
+  <h1 class="show-header">ST&Ouml;CK</h1>
+</div>
+
+<div class="text-center">
+    <div class="symbol-search">
+    <form action="/stocks">
+      <input class="symbol-search_input text-uppercase" type="text" placeholder="Symbol Search" name="ticker">
+    </form>
+    <span class="symbol-search_button"></span>
+  </div>
+</div>
+
+<div class="container">
+  <div class="quote">
+    <section class="basic-quote">
+      <p class="name"><%= @name %></p>
+      <div class="ticker-container text-uppercase">
+        <h2><%= @symbol %></h2>
+      </div>
+      <div class="bottom-border text-uppercase">
+        <div class="price-container">
+          <p class="price"><%= '%.2f' % @last_trade_price %></p><p class="currency">usd</p>
+        </div>
+        <div class="change-container">
+
+          <!-- Conditional statement to check whether change_point is +, - or no changes -->
+          <% if @change_points.start_with?('+') %>
+            <p class="green"><%= @change_points %></p>
+          <% elsif @change_points.start_with?('-') %>
+            <p class="red"><%= @change_points %></p>
+          <% else %>
+            <p class="normal"><%= @change_points %></p>
+          <% end %>
+
+          <!-- Conditional statement to check whether change_percent is +, - or no changes -->
+          <% if @change_percent.start_with?('+') %>
+            <p class="green"><%= @change_percent %></p>
+          <% elsif @change_percent.start_with?('-') %>
+            <p class="red"><%= @change_percent %></p>
+          <% else %>
+            <p class="normal"><%= @change_percent %></p>
+          <% end %>
+
+        </div>
+      </div>
+      <div class="datetime-container">
+        <p>As of <%= @last_trade_time %> on <%= @date %></p>
+      </div>
+    </section>
+
+    <section class="detailed-quote text-uppercase">
+      <!-- <div class=""> -->
+        <div class="open-price detailed-quote_container bottom-border">
+          <p><span class="detailed-title">open</span></p>
+          <p><span class="detailed-content"><%= '%.2f' % @open_price %></span></p>
+        </div>
+        <div class="day-range detailed-quote_container bottom-border">
+          <p><span class="detailed-title">day range</span></p>
+          <p><span class="detailed-content"><%= '%.2f' % @day_low %> - <%= '%.2f' % @day_high %></span></p>
+        </div>
+        <div class="volume detailed-quote_container bottom-border">
+          <p><span class="detailed-title">volume</span></p>
+          <p><span class="detailed-content"><%= @volume %></span></p>
+        </div>
+        <div class="previous-close detailed-quote_container bottom-border">
+          <p><span class="detailed-title">previous close</span></p>
+          <p><span class="detailed-content"><%= '%.2f' % @previous_close_price %></span></p>
+        </div>
+        <div class="average-volume detailed-quote_container bottom-border">
+          <p><span class="detailed-title">avg daily volume</span></p>
+          <p><span class="detailed-content"><%= @average_daily_volume %></span></p>
+        </div>
+        <div class="ask detailed-quote_container bottom-border">
+          <p><span class="detailed-title">ask</span></p>
+          <p><span class="detailed-content"><%= '%.2f' % @ask %></span></p>
+        </div>
+      <!-- </div> -->
+    </section>
+  </div>
+</div>

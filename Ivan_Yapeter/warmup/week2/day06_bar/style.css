@@ -1,0 +1,102 @@
+body {
+  width: 100%;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  text-decoration: none;
+  background-color: rgb(255, 255, 255);
+  color: #434343;
+}
+
+h1, h3, h4 {
+  font-family: 'Lobster', cursive;
+  font-weight: 400;
+  color: rgb(60, 116, 24);
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+section {
+  margin: 80px auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+  width: 80%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+header .title {
+  margin-top: 60px;
+  line-height: 0px;
+}
+
+header h2 {
+  font-size: 18px; 
+  margin-top: 5px;
+}
+
+.hero-img {
+  display: inline;
+  left: 0;
+}
+.hero-content {
+  display: inline;
+  right: 0;
+}
+
+.menu {
+  background-color: rgba(94, 152, 56, .9);
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.menu h2 {
+  color: #fff;
+}
+
+.menu h3 {
+  font-size: 25px;
+  margin-top: 40px;
+  margin-bottom: 5px;
+}
+
+.menu li {
+  color: #fff;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.price {
+  padding-left: 15px;
+  font-size: .8em;
+  font-style: italic;
+}
+
+.location > p {
+  display: inline-block;
+  width: 25%;
+}
+
+footer {
+  background-color: rgba(94, 152, 56, .9);
+  padding: 20px auto;
+}
