@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form - Graceful Degradation</title>
+</head>
+<body>
+
+  <p>Form here is an HTML/DOM to submit/take action if JavaScript is turned off</p>
+  <button>Hello</button><!-- This will do nothing without javascript because its outside of form -->
+
+  <form action="/destination">
+    <input type="text">
+    <input type="search">
+    <input type="number">
+    <input type="email">
+    <input type="date">
+    <input type="url">
+    <button id="form-btn">hello from form</button>
+  </form>
+
+  <script src="app.js"></script>
+</body>
+</html>

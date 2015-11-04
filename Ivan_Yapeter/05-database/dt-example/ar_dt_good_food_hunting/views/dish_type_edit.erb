@@ -1,0 +1,10 @@
+<h3>Edit Dish Type</h3>
+
+<form action="/dish_types/<%= @dish_types.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+  <label for="">Dish Type</label>
+
+  <input type="text" name="name" value="<% @dish_types.name %>">
+
+  <button>update dish</button>
+</form>

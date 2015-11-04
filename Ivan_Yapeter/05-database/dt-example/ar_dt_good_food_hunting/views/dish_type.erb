@@ -1,0 +1,9 @@
+<h3>List of Dish Types to be Edit</h3>
+
+<% @dish_types.each do |dish_type|%>
+  <li>
+    <a href="/dish_types/<%= dish_type.id %>/edit">
+      <%= dish_type.name %>
+    </a>
+  </li>
+<% end %>

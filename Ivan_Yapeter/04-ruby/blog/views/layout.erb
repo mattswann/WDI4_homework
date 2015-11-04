@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Sinatra will look for css in public folder by default -->
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a class="brand" href="/">Project Name</a>
+        <ul class="uppercase">
+          <li class="nav"><a href="/">Home</a></li>
+          <li class="nav"><a href="/blog">Blog</a></li>
+          <li class="nav"><a href="/about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+  <h1>Banner on top</h1>
+  <!-- yield combine layout.erb with others-->
+  <%= yield %>
+  </div>
+
+  <footer>
+    <p>Copyright</p>
+  </footer>
+</body>
+</html>

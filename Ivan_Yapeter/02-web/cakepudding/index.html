@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cakey</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header><h1 class="text-center">Cake Pudding</h1></header>
+
+    <div class="game-wrapper">
+      <div>
+        <div class="letter-guess">
+          <h3>Letters Guessed:</h3>
+          <p id="letter-guessed"><br></p>
+        </div>
+        <div class="turn-left">
+          <h3 class="text-center">Turn Left:</h3>
+          <p id="no-of-turn"><br></p>
+        </div>
+      </div>
+
+      <div class="text-center clearfix">
+        <p id="secret-word"></p>
+      </div>
+
+      <div>
+        <h1 id="win-or-lose" class="text-center"></h1>
+      </div>
+
+      <div class="keyboard">
+        <input class="btn" type="button" value="A" onclick="checkWord(this.value)">
+        <input class="btn" type="button" value="B" onclick="checkWord(this.value)">
+        <input class="btn" type="button" value="C" onclick="checkWord(this.value)">
+        <input class="btn" type="button" value="D" onclick="checkWord(this.value)">
+        <input class="btn" type="button" value="E" onclick="checkWord(this.value)">
+        <input class="btn" type="button" value="F" onclick="checkWord(this.value)">
+        <input class="btn" type="button" value="G" onclick="checkWord(this.value)">
+        <input class="btn" type="button" value="H" onclick="checkWord(this.value)">
+        <input class="btn" type="button" value="I" onclick="checkWord(this.value)">
+        <input class="btn" type="button" value="J" onclick="checkWord(this.value)">
+        <input class="btn" type="button" value="K" onclick="checkWord(this.value)">
+        <input class="btn" type="button" value="L" onclick="checkWord(this.value)">
+        <input class="btn" type="button" value="M" onclick="checkWord(this.value)">
+        <input class="btn" type="button" value="N" onclick="checkWord(this.value)">
+        <input class="btn" type="button" value="O" onclick="checkWord(this.value)">
+        <input class="btn" type="button" value="P" onclick="checkWord(this.value)">
+        <input class="btn" type="button" value="Q" onclick="checkWord(this.value)">
+        <input class="btn" type="button" value="R" onclick="checkWord(this.value)">
+        <input class="btn" type="button" value="S" onclick="checkWord(this.value)">
+        <input class="btn" type="button" value="T" onclick="checkWord(this.value)">
+        <input class="btn" type="button" value="U" onclick="checkWord(this.value)">
+        <input class="btn" type="button" value="V" onclick="checkWord(this.value)">
+        <input class="btn" type="button" value="W" onclick="checkWord(this.value)">
+        <input class="btn" type="button" value="X" onclick="checkWord(this.value)">
+        <input class="btn" type="button" value="Y" onclick="checkWord(this.value)">
+        <input class="btn" type="button" value="Z" onclick="checkWord(this.value)">
+      </div>
+
+      
+      <button id="reset-btn" class="btn">Reset Game</button>
+    </div> <!-- game wrapper -->
+
+    <button id="start-btn" class="btn">Start Game</button>
+    
+  </div>
+  <script src="cakepudding.js"></script>
+</body>
+</html>

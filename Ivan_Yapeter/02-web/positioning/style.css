@@ -1,0 +1,30 @@
+body {
+  background-color: linen;
+}
+
+.container {
+  border: 1px solid black;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hide {
+  visibility: hidden;
+  display: none; /*Display none will remove the whole thing and change the structure*/
+}
+
+.showInline {
+  display: inline;
+  background-color: yellow;
+  width: 500px; /*won't work on inline*/
+}
+
+.showBlock {
+  display: block;
+}
+
+.showInlineBlock {
+  display: inline-block;
+  width: 50%;
+  background-color: plum;
+}

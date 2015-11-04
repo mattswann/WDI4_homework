@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Good Food Hunting</title>
+</head>
+<body>
+  <% if logged_in? %>
+    <p>logged in as <%= current_user.email %></p>
+    <form action="/session" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <button>Logout</button>
+    </form>
+  <% end %>
+
+  <%= yield %>
+  
+</body>
+</html>
