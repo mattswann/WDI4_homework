@@ -1,0 +1,15 @@
+<h1>Good Food Hunting</h1>
+
+<form action="/add_new_dish">
+  <input type="text" placeholder="Dish Name" name="new_dish_name">
+  <input type="text" name="new_dish_image">
+  <button>Add</button>
+</form>
+
+<% @dishes.each do |dish| %>
+  <% @dish_name = dish['name'] %>
+  <% @dish_image_url = dish['image_url'] %>
+
+  <h2><a href="/dishes/<%= dish['id'] %>"><%= @dish_name %></a></h2>
+  <a href="/dishes/<%= dish['id'] %>"><img src="<%= @dish_image_url %>"></a>
+<% end %>

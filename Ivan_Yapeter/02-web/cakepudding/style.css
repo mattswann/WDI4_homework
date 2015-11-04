@@ -1,0 +1,95 @@
+body {
+  font-size: 24px;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 200;
+  background: #4888b0;
+  color: #fff;
+  text-shadow: 1px 1px 3px #666666;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.clearfix {
+  float: none;
+  clear: both;
+}
+
+/* Page Style 
+**************
+*/
+h1, h2, h3, p, input, button {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+
+input, button {
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+
+#secret-word {
+  font-size: 1.5em;
+  margin-bottom: 40px;
+}
+
+#win-or-lose {
+  height: 50px;
+}
+
+.letter-guess {
+  float: left;
+}
+.turn-left {
+  float: right;
+}
+
+/* Button 
+**********
+*/
+.btn {
+  border-radius: 2px;
+  text-shadow: 1px 1px 3px #666666;
+  color: #ffffff;
+  font-size: 35px;
+  background: #3498db;
+  margin: 5px;
+  border: solid #9cd7fc 2px;
+  text-decoration: none;
+  outline: none;
+}
+
+#start-btn, #reset-btn {
+  width: 280px;
+  height: 70px;
+  top: 70%;
+  margin: 0 37%;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+/* Keyboard
+************
+*/
+
+.keyboard {
+  display: inline-block;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.keyboard .btn {
+  width: 70px;
+  height: 70px;
+}

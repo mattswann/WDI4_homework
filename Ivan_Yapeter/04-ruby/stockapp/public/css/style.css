@@ -1,0 +1,223 @@
+/* General */
+/*********************************/
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+body {
+/*  background: url(/img/bg.jpg) no-repeat center center fixed;
+  background-size: cover;*/
+  background-color: black;
+  font-family: sans-serif;
+  font-size: 16px;
+  color: #FFF;
+  margin: 0;
+  min-width: 432px;
+}
+
+h1 {
+  font-family: serif;
+  font-size: 4em;
+  background: -webkit-linear-gradient(#A08C5B 0%, rgba(233, 219, 189, .9) 40%, #A08C5B 70%, #785f37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+p {
+  margin: 0;
+}
+
+/* Component */
+/*********************************/
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.bottom-border {
+  border-bottom: 1px dotted #FFF;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.normal {
+  color: #000;
+}
+
+/* Input */
+/*********************************/
+.symbol-search {
+  /*background-color: rgba(255,255,255, .9);*/
+  width: 23em;
+  padding: 3em 0;
+  margin: 2.5em auto;
+}
+
+.symbol-search_input {
+  min-height: 50px;
+  font-size: 1.8em;
+  border: 0;
+  border-bottom: 1px solid #A08C5B;
+  background-color: #000;
+  outline: none;
+}
+
+.symbol-search_button {
+  float: right;
+}
+
+input[type=text] {
+   /* And that ain't all of them... */
+   color: #A08C5B;
+   /*background-color: rgba(255,255,255, -.9);*/
+}
+
+input::-webkit-input-placeholder {
+  color: #A08C5B;
+}
+input::-moz-placeholder {
+  color: #A08C5B;
+}
+input:-moz-placeholder {   /* Older versions of Firefox */
+  color: #A08C5B;
+}
+input:-ms-input-placeholder { 
+  color: #A08C5B;
+}
+
+/*color
+font-size
+font-style
+font-weight
+letter-spacing
+line-height
+padding
+text-align
+text-decoration*/
+
+/* Index */
+/*********************************/
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+/* Stocks */
+/*********************************/
+.show-header {
+  font-size: 2em;
+}
+
+.quote {
+  padding-top: 30px;
+  border-top: 20px solid #A08C5B;
+}
+.name {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.ticker-container h2 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.price-container {
+  width: 70%;
+  display: inline-block;
+}
+.price {
+  display: inline-block;
+  font-size: 2.5em;
+}
+.currency {
+  display: inline-block;
+  margin-left: 2px;
+  font-size: 1.2em;
+  color: #A08C5B;
+}
+.change-container {
+  width: 28.8%;
+  text-align: right;
+  display: inline-block;
+}
+.change-container p {
+  margin: 0;
+  font-size: 1.1em;
+}
+.datetime-container p {
+  font-size: .85em;
+  font-family: serif;
+  font-style: italic;
+  color: #A08C5B;
+}
+
+.detailed-quote_container {
+  float: left;
+  min-width: 47.5%;
+  margin-right: 4.9%;
+  margin-top: 1.5em;
+}
+
+.day-range {
+  margin-right: 0;
+}
+
+.previous-close {
+  margin-right: 0;
+}
+
+.ask {
+  margin-right: 0;
+}
+
+.detailed-title {
+  font-size: .8em;
+  color: #A08C5B;
+}
+.detailed-content {
+  font-weight: 700;
+}
+
+/* Responsive */
+/*********************************/
+
+@media all and (min-width: 40em) {
+  .container {
+    width: 90%;
+    max-width: 750px;
+  }
+  .detailed-quote_container {
+    min-width: 30.066666667%;
+  }
+  .day-range {
+    margin-right: 4.9%;
+  }
+  .volume {
+    margin-right: 0;
+  }
+  .previous-close {
+    margin-right: 4.9%;
+  }
+  .ask {
+    margin-right: 0%;
+  }
+}

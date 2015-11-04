@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Brown Bank</title>
+   <link rel="shortcut icon" type="image/x-icon" href="https://33.media.tumblr.com/avatar_4d45956a6eb8_128.png" />
+   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,300italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container text-center">
+    <header>
+      <div class="logo">
+        <img src="http://cdn.trustedpartner.com/images/library/PalmBeachZoo2012/Content/Zoo%20Events/4ee82bdf60d4512132011225351.jpg" alt="">
+        <h1 class="logo-title">Brown Bank</h1>
+      </div>
+    </header>
+
+    <div class="tools">
+      <div class="savingBox">
+        <h3>Saving</h3>
+        <p>your balance is...</p>
+        <h4 id="savingBalance">100</h4>
+        <input id="savingInput" type="text" placeholder="ENTER AMOUNT HERE">
+        <button id="savingWithdraw-btn">WITHDRAW</button>
+        <button id="savingDeposit-btn">DEPOSIT</button>
+      </div>
+
+      <div class="checkingBox">
+        <h3>Checking</h3>
+        <p>your balance is...</p>
+        <h4 id="checkingBalance">100</h4>
+        <input id="checkingInput" type="text" placeholder="ENTER AMOUNT HERE">
+        <button id="checkingWithdraw-btn">WITHDRAW</button>
+        <button id="checkingDeposit-btn">DEPOSIT</button>
+      </div>
+    </div>
+    
+    <section class="status">
+      <h3 id="statusUpdate">Welcome to Brown Bank, it's party in here!</h3>
+    </section>
+  </div>
+
+
+  <script src="bank.js"></script>
+</body>
+</html>

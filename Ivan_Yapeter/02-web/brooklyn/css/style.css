@@ -1,0 +1,43 @@
+html {
+  font-family: 'Playfair Display', serif;
+  font-size: 12px;
+  color: #454545;
+  /*width: 100%; Only necessary on body as all browser start styling on Body instead of HTML*/
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.container {
+  width: 78%;
+  margin: 0 auto;
+}
+
+.post-title {
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.post-date {
+  line-height: 0px;
+  color: #2770B3;
+}
+
+.post-link {
+  text-decoration: none;
+  color: #2770B3;
+}
+
+.press img {
+  margin-top: 20px;
+  padding: 1px;
+  border: 6px solid #BDBDBD;
+}
+
+footer {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
